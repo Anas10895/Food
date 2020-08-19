@@ -1,18 +1,17 @@
 import React from 'react'
 import {View, Text, StyleSheet, FlatList} from 'react-native'
-
+import ResultItem from '../Components/ResultItem'
 const ReslutsList = ({title, resultes}) => {
     return <View>
     <Text style={style.tiltleStyle}>{title}</Text>
 
     <FlatList 
         horizontal
+        showsHorizontalScrollIndicator={false}
         data={resultes}
-        keyExtractor={(resultes) => {
-             resultes.id
-        }}
+        keyExtractor={result => result.id}
         renderItem={({item}) => {
-            return <Text style={style.list}>{item.name}</Text>
+            return <ResultItem data={item}/>
         }}
     />
 
@@ -20,9 +19,10 @@ const ReslutsList = ({title, resultes}) => {
 }
 const style = StyleSheet.create({
 tiltleStyle:{
-fontSize:18,
-fontWeight:'600',
-textAlign:"center",
+fontSize:22,
+fontWeight:'700',
+// textAlign:"center",
+marginLeft:15,
 
 },
 list:{
