@@ -24,9 +24,9 @@ const SearchScreen = () => {
     {resultes.length ? <Text>We have found {resultes.length} resultes</Text> : <Text>no resultes</Text>}
     */}
    <ScrollView >
-        <ResultsList resultes ={filterResult('$')} title={'Cost Effective'}/>
-        <ResultsList resultes ={filterResult('$$')} title={'Bit Pricier'}/>
-        <ResultsList resultes ={filterResult('$$$')} title={'Big Spender'}/>
+        <ResultsList resultes ={filterResult('$')} title={'Cost Effective'} />
+        <ResultsList resultes ={filterResult('$$')} title={'Bit Pricier'} />
+        <ResultsList resultes ={filterResult('$$$')} title={'Big Spender'} />
    </ScrollView>
  
 

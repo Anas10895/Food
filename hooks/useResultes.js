@@ -7,7 +7,6 @@ export default() => {
 
 
     const serachApi = async(anything) => {
-        console.log('hi ')
         try{
             const response = await yelp.get('/search', {
                 params:{
