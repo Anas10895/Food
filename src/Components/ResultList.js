@@ -4,10 +4,11 @@ import ResultItem from '../Components/ResultItem'
 import {withNavigation} from 'react-navigation'
 
 const ReslutsList = ({title, resultes, navigation}) => {
+    if(resultes.length === 0){ return null } 
     return <View>
     <Text style={style.tiltleStyle}>{title}</Text>
 
-    <FlatList 
+         <FlatList 
         horizontal
         showsHorizontalScrollIndicator={false}
         data={resultes}
@@ -18,7 +19,8 @@ const ReslutsList = ({title, resultes, navigation}) => {
                 <ResultItem data={item}/>
             </TouchableOpacity>) 
         }}
-    />
+    />  
+
 
     </View>
 }
@@ -34,6 +36,10 @@ list:{
     margin:10,
     padding:10,
 
+},
+Text:{
+fontSize:20,
+margin:10,
 }
 
 })

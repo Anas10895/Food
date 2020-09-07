@@ -43,6 +43,9 @@ const styles = StyleSheet.create({
     imageStyle:{
         width: 200,
         height: 300,
+        borderWidth:1,
+        borderColor:'red'
+
 
         
     },
